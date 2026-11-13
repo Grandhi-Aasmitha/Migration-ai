@@ -5,49 +5,7 @@ explain capability fit and gaps, assess decommission readiness, and produce a
 reviewable migration blueprint. This is an advisory design, not an automated
 migration or retirement tool.
 
-```mermaid
-flowchart TB
-    Architect["Enterprise architect workspace<br/>Enter source application, scope, and evidence"]
-    Knowledge["Existing enterprise knowledge layer<br/>Documents · application inventory · relationships · existing APIs"]
-    Identity["Organization identity and access policies"]
-    API["Migration architect API<br/>Assessment management and authorized review"]
-    Workflow["Migration assessment orchestrator<br/>Coordinates evidence, analysis, revisions, and outputs"]
-
-    Architect --> API
-    Identity -. "access rules" .-> API
-    API --> Workflow
-    Knowledge -->|"permitted landscape evidence"| Workflow
-
-    subgraph Intelligence["Orchestrated migration intelligence — logical assessment stages"]
-        direction LR
-        S1["1. Source<br/>analysis"] --> S2["2. Target<br/>discovery"]
-        S2 --> S3["3. Capability<br/>fit"]
-        S3 --> S4["4. Dependency<br/>and gap analysis"]
-        S4 --> S5["5. Architecture<br/>comparison"]
-        S5 --> S6["6. Solution<br/>architecture"]
-        S6 --> S7["7. Migration<br/>roadmap"]
-    end
-
-    Workflow --> S1
-    S7 --> Gates["Evidence validation gates<br/>Coverage · constraints · cost/risk · decommission blockers"]
-    Gates --> Blueprint["Proposed migration blueprint<br/>Target applications · target architecture · gaps · roadmap · validation · fallback"]
-    Blueprint --> Review["Human architect review<br/>Approve, reject, or request revision"]
-    Review -. "corrections and decisions" .-> API
-
-    classDef knowledge fill:#e6f7e9,stroke:#4c9b70,color:#173d27,stroke-width:2px;
-    classDef workspace fill:#d9ecff,stroke:#3377ae,color:#173d61,stroke-width:2px;
-    classDef workflow fill:#dceaff,stroke:#5480bd,color:#1d355d,stroke-width:2px;
-    classDef stage fill:#f2e9fb,stroke:#9a74bb,color:#40265a,stroke-width:1.5px;
-    classDef gate fill:#fff0d2,stroke:#bb8c2b,color:#5c3d0e,stroke-width:2px;
-    classDef output fill:#d4ecff,stroke:#2579ae,color:#123e60,stroke-width:2px;
-
-    class Knowledge knowledge;
-    class Architect,Identity,API workspace;
-    class Workflow workflow;
-    class S1,S2,S3,S4,S5,S6,S7 stage;
-    class Gates,Review gate;
-    class Blueprint output;
-```
+![High-level application migration architecture](high-level-architecture.png)
 
 ## How to read this diagram
 
