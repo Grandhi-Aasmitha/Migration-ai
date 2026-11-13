@@ -16,6 +16,7 @@ is included.
 - [Data model](specs/002-assess-application-fit/data-model.md)
 - [Validation guide](specs/002-assess-application-fit/quickstart.md)
 - [Interface contracts](specs/002-assess-application-fit/contracts/)
+- [Implementation tasks](specs/002-assess-application-fit/tasks.md)
 
 The `.specify/` and `.agents/skills/` directories contain the Spec Kit workflow
 used to continue planning and development.

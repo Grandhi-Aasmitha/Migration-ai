@@ -81,7 +81,7 @@ specs/002-assess-application-fit/
 │   ├── assessment-api.md
 │   ├── knowledge-source.md
 │   └── decision-record.md
-└── tasks.md                 # Future $speckit-tasks output; not created here
+└── tasks.md                 # Phase 2 $speckit-tasks output
 ```
 
 ### Source Code (repository root)
