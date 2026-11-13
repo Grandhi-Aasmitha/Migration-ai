@@ -9,6 +9,7 @@ The work is at the specification and design stage. No application implementation
 is included.
 
 - [Project constitution](.specify/memory/constitution.md)
+- [High level architecture diagram](docs/high-level-architecture.md)
 - [Feature specification](specs/002-assess-application-fit/spec.md)
 - [Requirements quality checklist](specs/002-assess-application-fit/checklists/requirements.md)
 - [Implementation plan](specs/002-assess-application-fit/plan.md)
